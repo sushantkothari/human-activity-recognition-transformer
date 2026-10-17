@@ -288,7 +288,7 @@ Step 10  Export
 
 Wearable sensor data is inherently a continuous stream — there are no natural sample boundaries in the raw signal. Sliding window segmentation converts this stream into a supervised learning problem by treating each fixed-length temporal window as a single training example.
 
-The window length controls the amount of temporal context visible to the model per inference step. A 50 Hz sensor stream with a 128-sample window provides approximately 2.6 seconds of motion context, sufficient to capture multiple gait cycles, jump phases, or upper-limb gesture arcs. Configurable stride controls the density of the sliding window and the degree of temporal overlap between consecutive samples, trading training set size against data redundancy.
+The window length determines the amount of temporal information available to the model during each inference step. A 50 Hz sensor stream with a 128-sample window provides approximately 2.6 seconds of motion context, sufficient to capture multiple gait cycles, jump phases, or upper-limb gesture arcs. Configurable stride controls the density of the sliding window and the degree of temporal overlap between consecutive samples, trading training set size against data redundancy.
 
 ### Dilated Causal Convolution
 
